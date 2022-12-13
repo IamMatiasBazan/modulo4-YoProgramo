@@ -68,7 +68,7 @@ VALUES
 /* 13)Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG o SAMSUNG*/
 	SELECT nombre, telefono FROM usuarios WHERE marca <> "LG" <> "SAMSUNG";
 /* 14)Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL*/
-	SELECT usuario, telefono FROM usuarios WHERE compania = 'UNEFON';
+	SELECT usuario, telefono FROM usuarios WHERE compania = 'IUSACELL';
 /* 15)Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL */
 	SELECT usuario, telefono FROM usuarios WHERE compania <> "TELCEL";
 /* 16)Calcular el saldo promedio de los usuarios que tienen teléfono marca NOKIA */
