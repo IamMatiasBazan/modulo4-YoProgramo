@@ -62,7 +62,7 @@ VALUES
 /* 10)Listar el login de los usuarios con nivel 2 */
 	SELECT usuario FROM usuarios WHERE nivel = 2;
 /* 11)Mostrar el email de los usuarios que usan gmail*/
-	SELECT email FROM usuarios WHERE email LIKE "%gmail%";
+	SELECT email FROM usuarios WHERE email LIKE "%@gmail.com%";
 /* 12)Listar nombre y teléfono de los usuarios con teléfono LG, SAMSUNG o MOTOROLA*/
 	SELECT nombre, telefono FROM usuarios WHERE marca = "LG" OR "SAMSUNG" OR "MOTOROLA";
 /* 13)Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG o SAMSUNG*/
@@ -76,15 +76,15 @@ VALUES
 /* 17)Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o AXEL*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "IUSACELL" OR "AXEL";
 /* 18)Mostrar el email de los usuarios que no usan yahoo */
-	SELECT email FROM usuarios WHERE email <> "yahoo";
+	SELECT email FROM usuarios WHERE email LIKE "%@yahoo.com%";
 /* 19)Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL o IUSACELL*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "TELCEL" OR "IUSACELL";
 /* 20)Listar el login y teléfono de los usuarios con compañía telefónica UNEFON*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "UNEFON";
 /* 21)Listar las diferentes marcas de celular en orden alfabético descendentemente*/
-	SELECT marca FROM usuarios ORDER BY marca DESC;
+	SELECT DISTINC marca FROM usuarios ORDER BY marca DESC;
 /* 22)Listar las diferentes compañías en orden alfabético aleatorio*/
-	SELECT compania FROM usuarios ORDER BY compania ASC;
+	SELECT DISTINC compania FROM usuarios ORDER BY compania ASC;
 /* 23)Listar el login de los usuarios con nivel 0 o 2*/
 	SELECT usuario, nivel FROM usuarios WHERE nivel IN (0, 2);
 /* 24)Calcular el saldo promedio de los usuarios que tienen teléfono marca LG*/
@@ -112,7 +112,7 @@ VALUES
 /* 35)Calcular el saldo mínimo de los usuarios de sexo “Hombre” */
 	SELECT min(saldo) FROM usuarios WHERE sexo="H";
 /*36) Listar los números de teléfono con saldo mayor a 300 */
-	SELECT telefono FROM usuarios WHERE saldo > 299;
+	SELECT telefono FROM usuarios WHERE saldo > 300;
 /*37)Contar el número de usuarios por marca de teléfono */
 	SELECT marca, COUNT(*) FROM usuarios GROUP BY marca;
 /*38)Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG*/
