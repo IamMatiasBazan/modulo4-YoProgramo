@@ -48,7 +48,7 @@ VALUES
 /* 3)Listar nombre y teléfono de los usuarios con teléfono NOKIA, BLACKBERRY o SONY */
 	SELECT nombre, telefono FROM usuarios WHERE marca = "NOKIA" OR "BLACKBERRY" OR "SONY";
 /* 4)Contar los usuarios sin saldo o inactivos */
-	SELECT COUNT(usuario) FROM usuarios WHERE saldo = 0 OR "inactivo";
+	SELECT COUNT(usuario) FROM usuarios WHERE saldo = 0;
 /* 5)Listar el login de los usuarios con nivel 1, 2 o 3*/
 	SELECT usuario FROM usuarios WHERE nivel = 1 OR 2 OR 3;
 /* 6)Listar los números de teléfono con saldo menor o igual a 300 */
