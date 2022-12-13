@@ -50,7 +50,7 @@ VALUES
 /* 4)Contar los usuarios sin saldo o inactivos */
 	SELECT COUNT(usuario) FROM usuarios WHERE saldo = 0;
 /* 5)Listar el login de los usuarios con nivel 1, 2 o 3*/
-	SELECT usuario FROM usuarios WHERE nivel = 1 OR 2 OR 3;
+	SELECT usuario FROM usuarios WHERE nivel IN (1, 2, 3);
 /* 6)Listar los números de teléfono con saldo menor o igual a 300 */
 	SELECT telefono FROM usuarios WHERE saldo <= 300;
 /* 7)Calcular la suma de los saldos de los usuarios de la compañía telefónica NEXTEL*/
