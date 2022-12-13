@@ -56,9 +56,9 @@ VALUES
 /* 7)Calcular la suma de los saldos de los usuarios de la compañía telefónica NEXTEL*/
 	SELECT sum(SALDO) FROM usuarios WHERE compania = "NEXTEL";
 /* 8)Contar el número de usuarios por compañía telefónica */
-	SELECT COUNT(usuario) FROM usuarios;
+	SELECT compania, COUNT(*) FROM usuarios GROUP BY compania;
 /* 9)Contar el número de usuarios por nivel */
-	SELECT nivel, COUNT(*) FROM Usuarios GROUP BY nivel;
+	SELECT nivel, COUNT(*) FROM usuarios GROUP BY nivel;
 /* 10)Listar el login de los usuarios con nivel 2 */
 	SELECT usuario FROM usuarios WHERE nivel = 2;
 /* 11)Mostrar el email de los usuarios que usan gmail*/
