@@ -124,7 +124,7 @@ VALUES
 /*41)Mostrar el email de los usuarios que usan hotmail*/
 	SELECT email FROM usuarios WHERE email LIKE "%@hotmail.com%";
 /* 42)Listar los nombres de los usuarios sin saldo o inactivos*/
-	SELECT nombre FROM usuarios WHERE saldo = 0;
+	SELECT nombre FROM usuarios WHERE saldo = 0 OR activo = 0;
 /* 43)Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o TELCEL*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "IUSACELL" OR "TELCEL";
 /* 44)Listar las diferentes marcas de celular en orden alfabético ascendentemente*/
