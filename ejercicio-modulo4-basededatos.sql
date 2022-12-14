@@ -134,7 +134,7 @@ VALUES
 /* 46)Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o UNEFON*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "IUSACELL" OR "UNEFON";
 /* 47)Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca MOTOROLA o NOKIA*/
-	SELECT nombre, telefono,marca FROM usuarios WHERE marca <> "MOTOROLA" <> "NOKIA";
+	SELECT nombre, telefono FROM usuarios WHERE marca <> "MOTOROLA" <> "NOKIA";
 /* 48)Calcular la suma de los saldos de los usuarios de la compañía telefónica TELCEL*/
 		SELECT sum(saldo) FROM usuarios WHERE compania = "TELCEL";
 
