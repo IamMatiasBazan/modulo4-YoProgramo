@@ -76,15 +76,15 @@ VALUES
 /* 17)Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o AXEL*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "IUSACELL" OR "AXEL";
 /* 18)Mostrar el email de los usuarios que no usan yahoo */
-	SELECT email FROM usuarios WHERE email LIKE "%@yahoo.com%";
+	SELECT email FROM usuarios WHERE email NOT LIKE "%@yahoo.com%";
 /* 19)Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL o IUSACELL*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "TELCEL" OR "IUSACELL";
 /* 20)Listar el login y teléfono de los usuarios con compañía telefónica UNEFON*/
 	SELECT usuario, telefono FROM usuarios WHERE compania = "UNEFON";
 /* 21)Listar las diferentes marcas de celular en orden alfabético descendentemente*/
-	SELECT DISTINC marca FROM usuarios ORDER BY marca DESC;
+	SELECT DISTINCT marca FROM usuarios ORDER BY marca DESC;
 /* 22)Listar las diferentes compañías en orden alfabético aleatorio*/
-	SELECT DISTINC compania FROM usuarios ORDER BY compania ASC;
+	SELECT DISTINCT compania FROM usuarios ORDER BY compania ASC;
 /* 23)Listar el login de los usuarios con nivel 0 o 2*/
 	SELECT usuario, nivel FROM usuarios WHERE nivel IN (0, 2);
 /* 24)Calcular el saldo promedio de los usuarios que tienen teléfono marca LG*/
