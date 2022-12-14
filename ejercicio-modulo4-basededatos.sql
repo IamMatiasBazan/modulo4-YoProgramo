@@ -104,7 +104,7 @@ VALUES
 /* 31)Listar el login y teléfono de los usuarios con compañía telefónica AT&T */
 	SELECT usuario, telefono FROM usuarios WHERE compania = "AT&T";
 /* 32)Listar las diferentes compañías en orden alfabético descendentemente */
-	SELECT compania FROM usuarios ORDER BY compania ASC;
+	SELECT compania FROM usuarios ORDER BY compania DESC;
 /* 33)Listar el login de los usuarios inactivos */
 	SELECT usuario FROM usuarios WHERE activo = 0;
 /* 34)Listar los números de teléfono sin saldo */
