@@ -122,7 +122,7 @@ VALUES
 /*40)Calcular la suma de los saldos de los usuarios de la compañía telefónica UNEFON*/
 	SELECT SUM(saldo) FROM usuarios WHERE compania = "UNEFON";
 /*41)Mostrar el email de los usuarios que usan hotmail*/
-	SELECT email FROM usuarios WHERE email LIKE "%hotmail%";
+	SELECT email FROM usuarios WHERE email LIKE "%@hotmail.com%";
 /* 42)Listar los nombres de los usuarios sin saldo o inactivos*/
 	SELECT nombre FROM usuarios WHERE saldo = 0;
 /* 43)Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o TELCEL*/
