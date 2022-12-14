@@ -84,7 +84,7 @@ VALUES
 /* 21)Listar las diferentes marcas de celular en orden alfabético descendentemente*/
 	SELECT DISTINCT marca FROM usuarios ORDER BY marca DESC;
 /* 22)Listar las diferentes compañías en orden alfabético aleatorio*/
-	SELECT DISTINCT compania FROM usuarios ORDER BY compania ASC;
+	SELECT compania FROM usuarios ORDER BY RAND();
 /* 23)Listar el login de los usuarios con nivel 0 o 2*/
 	SELECT usuario, nivel FROM usuarios WHERE nivel IN (0, 2);
 /* 24)Calcular el saldo promedio de los usuarios que tienen teléfono marca LG*/
